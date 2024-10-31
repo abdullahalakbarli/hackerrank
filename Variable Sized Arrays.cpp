@@ -17,6 +17,7 @@ int main() {
     int n, q;
     cin >> n >> q;
     vector <vector <int>> all_data;
+    vector <int> result;
     for (int i = 0; i < n; i++){
         int k;
         cin >> k;
@@ -31,7 +32,10 @@ int main() {
     for (int i = 0; i < q; i++){
         int q1, q2;
         cin >> q1 >> q2;
-        cout << all_data[q1][q2] << '\n';
+        result.push_back(all_data[q1][q2]);
+    }
+    for (int i = 0; i < q; i++){
+        cout << result[i] << '\n';
     }
     return 0;
 }
